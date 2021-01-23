@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Yantramanav', sans-serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: hsl(216, 7%, 14%);
+}
+
+main {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex-basis: 50px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  background: hsl(223, 7%, 20%);
+}
+
+header > h1 {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.msg-board {
+  flex-basis: 100%;
+  padding: 10px;
+  background: hsl(220, 8%, 23%);
+  overflow: scroll;
+}
+
+.message {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sender-pic {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.sender-pic > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 80%;
+}
+
+.message-detail {
+  width: 500px;
+}
+
+.message-info {
+  display: flex;
+  align-items: center;
+}
+
+.sender-name {
+  max-width: 200px;
+  margin-right: 20px;
+  color: hsl(0, 0%, 100%, 90%);
+  font-weight: 500;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.send-date {
+  color: hsl(0, 0%, 100%, 70%);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.message-content {
+  color: hsl(0, 0%, 100%, 80%);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+form {
+  position: relative;
+}
+
+input, textarea {
+  width: 100%;
+  height: 30px;
+  padding: 5px 10px 5px 10px;
+  display: block;
+  color: hsl(0, 0%, 100%, 70%);
+  border: none;
+}
+
+textarea[name='text'] {
+  min-height: 60px;
+  max-width: 100%;
+  max-height: 90px;
+  background: hsl(218, 8%, 27%);
+  font-size: 14px;
+}
+
+input[name='sender'] {
+  background: hsl(220, 8%, 23%);
+  font-size: 16px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: hsl(0, 0%, 100%, 50%);
+}
+
+#send {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background: hsl(216, 7%, 14%);
+  color: hsl(0, 0%, 100%, 50%);
+  border: none;
+}
+
+
+
+

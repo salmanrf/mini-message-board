@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  main
+    header
+      h1 Mini Message Board
+    div(class='msg-board')
+      each msg in messages
+        div(class='message')
+          div(class='sender-pic')
+            img(alt='madeline', src='https://i.pinimg.com/originals/cb/28/32/cb2832efeb9101d2e86f49e9af53f9c7.jpg')
+          div(class='message-detail')
+            div(class='message-info')
+              div(class='sender-name') 
+                p #{msg.sender}
+              div(class='send-date') 
+                p #{msg.added}            
+            div(class='message-content')
+              p #{msg.text}
+    form(method='POST', action='/new')
+      textarea(type='text', name='text', placeholder='Message...', required) #{""}
+      input(type='text', name='sender', placeholder='Author', required)
+      button(type='submit', id='send') Send
+  script(src='/javascripts/script.js')
